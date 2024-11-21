@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<style type="text/css">
+		.wrapper{
+			width:100%;
+			table-layout:fixed;
+			padding-bottom:60px;
+		}
+		.main{
+			width:100%;
+			max-width:600px;
+			background-color:white;
+			font-family:sans-serif;
+			color:#4a4a4a;
+			box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+		}
+		.logo{
+			padding:0 0 10px;
+			text-align:center;
+		}
+		.menu{
+			width:100%;
+			max-width:600px;
+			background-color:white;
+			font-family:'Open Sans', sans-serif;
+			color:#4a4a4a;
+			font-size:14px;
+			text-align:center;
+		}
+		.menu-item1{
+			width:200px;
+			height:100px;
+		}
+		.menu-item2{
+			width:200px;
+			height:100px;
+		}
+		.vertical-divider{
+			width:1px;
+			height:90px;
+			background-color:#bababa;
+		}
+		.horizontal-divider{
+			width:582px;
+			height:1px;
+			background-color:#bababa;
+			margin-left:8px;
+		}
+		.social{
+			width:578px;
+			height:62px;
+			background-color:#fff;
+			border-radius:8px;
+			margin:auto;
+		}
+		.social-01{
+			width:289px;
+			text-align:right;
+			font-family:'Montserrat', sans-serif;
+			font-size:16px;
+			font-weight:900;
+			color:#6C6C6C;
+		}
+		.social-02{
+			width:289px;
+			text-align:center;
+		}
+		.info-footer{
+			width:580px;
+			background-color:#fff;
+			border-radius:8px;
+			margin:auto;
+			text-align:center;
+		}
+		.info-text-01{
+			text-align:left;
+			font-family:'Montserrat', sans-serif;
+			font-size:12px;
+			font-weight:300;
+			color:#6C6C6C;
+			padding:12px 8px 0 8px;
+		}
+		.info-text-02{
+			text-align:left;
+			font-family:'Montserrat', sans-serif;
+			font-size:12px;
+			font-weight:600;
+			color:#6C6C6C;
+			padding:0 8px 12px 8px;
+		}
+		.footer-cards{
+			width:578px;
+			height:62px;
+			background-color:#fff;
+			border-radius:8px;
+			margin:auto;
+		}
+		body{
+			margin:0;
+			padding:0;
+			width:100% !important;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+		}
+		table{
+			border-spacing:0;
+		}
+		img{
+			border:0;
+			display:block;
+		}
+		.content td{
+			vertical-align:top;
+		}
+		a{
+			text-decoration:none;
+			color:#2C2C2C;
+		}
+		a:link{
+			color:#2C2C2C;
+			font-family:Open Sans, 'Helvetica Neue', Helvetica, sans-serif;
+			font-weight:300;
+			line-height:1.875;
+			font-size:12px;
+			text-decoration:none;
+		}
+		a:hover{
+			color:#376D49;
+			text-decoration:underline;
+		}
+		.table-container{
+			max-width:600px;
+			margin:0 auto;
+			padding:10px;
+			border:1px solid #eee;
+			box-shadow:0 0 10px rgba(0, 0, 0, .15);
+			color:#363545;
+			font-family:'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+			font-weight:300;
+			line-height:1.5;
+			font-size:14px;
+		}
+		.header,.footer,.content{
+			max-width:600px;
+			margin:auto;
+			padding:10px;
+			font-size:10px;
+		}
+		.footer{
+			background-color:#f8f8f8;
+		}
+		.nav ul{
+			padding:0;
+			margin:0 auto;
+			list-style-type:none;
+			text-align:center;
+		}
+		.nav li{
+			display:inline-block;
+		}
+		.nav li a{
+			display:inline-block;
+			text-align:center;
+			padding:5px;
+		}
+		.nav li a:hover{
+			color:#004519;
+			border-bottom:1px solid #000;
+			text-decoration:none;
+			padding-bottom:0;
+		}
+		.btn{
+			margin-bottom:15px;
+			border-radius:4px;
+			font-weight:bold;
+			padding:2px 45px;
+			display:inline-block;
+			line-height:20px;
+			border:none;
+			font-size:11px;
+			color:#fff;
+			background-color:#004519;
+			transition:all 0.3s ease;
+		}
+		.btn:hover{
+			background-color:#004519;
+			color:white;
+			text-decoration:none;
+		}
+		.content{
+			text-align:center;
+		}
+		.img-prod{
+			display:inline-block;
+			width:auto;
+			height:100px;
+			border:2px solid orange;
+			border-radius:10px;
+		}
+		.cta-button{
+			background-color:#00bb54;
+			color:white !important;
+			font-family:'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+			font-size:22px !important;
+			font-weight:bold !important;
+			text-align:center;
+			text-decoration:none;
+			padding:15px 25px;
+			border-radius:5px;
+			display:inline-block;
+			margin-top:20px;
+			transition:background-color 0.3s ease;
+		}
+		.nome-prod{
+			font-size:12px;
+			font-weight:700;
+			text-decoration:none;
+			color:#2c2c2c;
+		}
+		.nome-prod:hover{
+			color:#2C2C2C;
+			font-size:12px;
+			font-weight:700;
+			text-decoration:none;
+		}
+		.preco-ant{
+			font-size:12px;
+			color:red;
+			text-decoration-line:line-through;
+		}
+		.preco-ant:hover{
+			font-size:12px;
+			color:red;
+			text-decoration:line-through;
+		}
+		.preco-pos{
+			font-size:20px;
+			color:#2c2c2c;
+			font-weight:700;
+			text-decoration:none;
+		}
+		.preco-pos:hover{
+			font-size:20px;
+			color:#2C2C2C;
+			font-weight:700;
+			text-decoration:none;
+		}
+		.comprar{
+			font-size:12px;
+			background-color:orange;
+			padding:4px;
+			padding-left:10px;
+			padding-right:10px;
+			border-radius:5px;
+			color:#2c2c2c !important;
+			text-decoration:none;
+		}
+		.comprar:hover{
+			font-size:12px;
+			background-color:rgb(252, 164, 0);
+			padding:4px;
+			padding-left:10px;
+			padding-right:10px;
+			border-radius:5px;
+			color:#2c2c2c !important;
+			text-decoration:none;
+		}
+		.comprar:visited{
+			font-size:12px;
+			background-color:#FFA500;
+			padding:4px;
+			padding-left:10px;
+			padding-right:10px;
+			border-radius:5px;
+			color:#2c2c2c !important;
+			text-decoration:none;
+		}
+		.cta-button:hover{
+			background-color:#03ff74;
+			text-decoration:none;
+		}
+	@media only screen and (max-width: 480px){
+		.canspamBar td{
+			font-size:14px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.canspamBar td a{
+			display:block !important;
+			margin-top:10px !important;
+		}
+
+}
+</style>
+</head>
+<body>
+	{% if not download %}
+    <button onclick="window.location.href='{% url 'upload_csv' %}'" style="background:green; color:white; cursor:pointer;" >Criar Novo E-mail</button>
+    <button onclick="window.location.href='{% url 'download_html' %}'" style="background:green; color:white; cursor:pointer;">Baixar Email</button>
+	{% endif %}
+    <div class="table-container">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="header" align="center" style="background-color:#2c2c2c;">
+                    <a><img src="https://ci3.googleusercontent.com/meips/ADKq_NZvEEA3ZTIpsF-nprUE7AvxobOizf3Yxbmnc0AqqlFPfqF_43bOi3-CkpdJoXFNcjMXaxbCD4v7LPvcWSfhEBCEm9dcoScml9j0RT68Lko=s0-d-e1-ft#https://cdn.awsli.com.br/941/941759/arquivos/logo-min.png"></a>
+                </td>
+            </tr>
+        </table>
+        <hr style="height:1px; border:none; background-color:#ccc; margin-top: 10px; margin-bottom: 0px;">
+        <a target="_blank" href="{{banner.linkimg1}}"><img width="590" src="{{banner.img1}}" alt="Obra & Lar" style="margin-top: 10px; border-radius: 10px;"><br></a>
+        <div>			
+            <table class="content" cellspacing="0" cellpadding="15" border="0" role="presentation">
+			<tbody>
+				{% for produto in produtos %}
+				{% if forloop.counter < 5 %}
+					{% if forloop.counter0|divisibleby:4 and not forloop.first %}
+						</tr>
+					{% endif %}
+					{% if forloop.counter0|divisibleby:4 %}
+						<tr>
+					{% endif %}
+					<td class="item-produto">
+						<div class="produto">
+							<img class="img-prod" src="{{produto.thumb}}" alt="Produto 1">
+							<br>
+							<a class="nome-prod">{{produto.nome}}</a>
+							<br>
+							{% if price == 'sim' %}
+							<a class="preco-ant">R$ {{produto.preco_anterior}}</a>
+							<br>
+							<a class="preco-pos">R$ {{produto.preco_atual}}</a>
+							<br>
+							{% elif price == 'nao' %}
+							<br>
+							{% endif %}
+							<br>
+							<a class="comprar" href="{{produto.linkcompra}}" style="color: #eee;">conferir</a>
+						</div>
+					</td>
+				{% endif %}
+			{% endfor %}
+			</tbody>
+			
+        </table>
+			<div class="mini-banner" style="display: flex; justify-content: center;">
+				<a target="_blank" href="{{banner.linkimg2}}"><img width="265" src="{{banner.img2}}" alt="Obra & Lar" style="margin: 10px; border-radius: 10px; border:2px solid white;"><br></a>
+				<a target="_blank" href="{{banner.linkimg3}}"><img width="265" src="{{banner.img3}}" alt="Obra & Lar" style="margin: 10px; border:2px solid white; border-radius: 10px;"><br></a>
+			</div>
+        <a target="_blank" href="{{banner.linkimg4}}"><img width="590" src="{{banner.img4}}" alt="Obra & Lar" style="margin-top: 10px; border-radius: 10px;"><br></a>
+		<table class="content" cellspacing="0" cellpadding="15" border="0" role="presentation">
+			<tbody>
+				{% for produto in produtos %}
+				{% if forloop.counter > 4 %}
+					{% if forloop.counter0|divisibleby:4 and not forloop.first %}
+						</tr>
+					{% endif %}
+					{% if forloop.counter0|divisibleby:4 %}
+						<tr>
+					{% endif %}
+					<td class="item-produto">
+						<div class="produto">
+							<img class="img-prod" src="{{produto.thumb}}" alt="Produto 1">
+							<br>
+							<a class="nome-prod">{{produto.nome}}</a>
+							<br>
+							{% if price == 'sim' %}
+							<a class="preco-ant">R$ {{produto.preco_anterior}}</a>
+							<br>
+							<a class="preco-pos">R$ {{produto.preco_atual}}</a>
+							<br>
+							{% elif price == 'nao' %}
+							<br>
+							{% endif %}
+							<br>
+							<a class="comprar" href="{{produto.linkcompra}}" style="color: #eee;">conferir</a>
+						</div>
+					</td>
+				{% endif %}
+			{% endfor %}
+			</tbody>
+			
+        </table>
+        </div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:white;">
+			<tr>
+                    <td align="center">
+						<a href="{{banner.linkimg5}}" target="_blank"><img width="599" src="{{banner.img5}}" alt="Obra & Lar" style=" padding-bottom: 10px;"></a>
+						<img src="https://mcusercontent.com/cb8b6c65bfdc0925896dba141/images/2ad43d07-e07d-c2e0-2fa0-2c44bef8a06d.jpg" usemap="#image-map" style="background-color:#fff; padding-top: 0px; border-top: 2px solid #E0E0E0 ; border-bottom: 2px solid #E0E0E0 ;">
+						<map name="image-map">
+						    <area target="_blank" alt="Colas e Adesivos" title="Colas e Adesivos" href="https://www.obraelar.com.br/colas-e-adesivos" coords="0,6,134,77" shape="rect">
+						    <area target="_blank" alt="Elétricos" title="Elétricos" href="https://www.obraelar.com.br/eletrico" coords="144,10,216,69" shape="rect">
+						    <area target="_blank" alt="Ferragens" title="Ferragens" href="https://www.obraelar.com.br/categoria/ferragens.html" coords="233,8,319,71" shape="rect">
+						    <area target="_blank" alt="Ferramentas" title="Ferramentas" href="https://www.obraelar.com.br/ferramentas" coords="333,10,433,70" shape="rect">
+						    <area target="_blank" alt="Hidráulicos" title="Hidráulicos" href="https://www.obraelar.com.br/categoria/hidraulico.html" coords="448,12,541,68" shape="rect">
+						    <area target="_blank" alt="Materiais de Pintura" title="Materiais de Pintura" href="https://www.obraelar.com.br/materiais-de-construcao" coords="4,83,160,146" shape="rect">
+						    <area target="_blank" alt="Pintura" title="Pintura" href="https://www.obraelar.com.br/pintura" coords="179,84,249,145" shape="rect">
+						    <area target="_blank" alt="Utilidades para o Lar" title="Utilidades para o Lar" href="https://www.obraelar.com.br/categoria/utilidades-para-o-lar.html" coords="273,88,407,150" shape="rect">
+						    <area target="_blank" alt="Papelaria" title="Papelaria" href="https://www.obraelar.com.br/papelaria" coords="422,81,537,150" shape="rect">
+						</map>
+						<br>
+                    </td>
+                </tr>
+		</table>
+    
+<tr>
+    <td>
+        <img src="https://cdn.awsli.com.br/941/941759/arquivos/footer-02-min.png" target="_blank" style="max-width: 100%;">
+    </td>
+</tr>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #2c2c2c;">
+                
+                <tr>
+                    <td>
+                        <a href="https://obraelar.com.br"><img style="display:block; border:0; height:34px; width:134px; margin-left: 30px;" src="https://ci3.googleusercontent.com/meips/ADKq_NZvEEA3ZTIpsF-nprUE7AvxobOizf3Yxbmnc0AqqlFPfqF_43bOi3-CkpdJoXFNcjMXaxbCD4v7LPvcWSfhEBCEm9dcoScml9j0RT68Lko=s0-d-e1-ft#https://cdn.awsli.com.br/941/941759/arquivos/logo-min.png" alt="Obra & Lar"></a>
+                    </td>
+                    <td>
+                        <p style="font-family: 'Open Sans', Helvetica, sans-serif;font-size: 10px;color: #fff;">
+                            OBRA & LAR BAZAR LTDA EPP - CNPJ: 19.556.862/0001-23 <br>© Todos os direitos reservados. 2024
+                            
+                        </p>
+                    </td>
+                </tr>
+            </table>
+    </div>
+</body>
+</html>
