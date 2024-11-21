@@ -32,6 +32,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -110,15 +112,18 @@ USE_TZ = True
 
 # URL para acessar arquivos estáticos
 STATIC_URL = '/static/'
-
+STATIC_ROOT = BASE_DIR / 'static'
 # Diretórios onde os arquivos estáticos são armazenados durante o desenvolvimento
+# Diretório para os arquivos estáticos usados no desenvolvimento
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Pasta 'static' na raiz do projeto para uso durante o desenvolvimento
+    BASE_DIR / 'static',  # Use a pasta 'static' na raiz do projeto para desenvolvimento
 ]
-# Diretório para armazenar os arquivos estáticos em produção (usado pelo collectstatic)
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')]  # Pasta para coletar arquivos para produção
 
+# Diretório para onde o collectstatic enviará os arquivos em produção
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Use uma pasta separada para o collectstatic
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

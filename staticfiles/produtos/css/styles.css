@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 20px;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: var(--font-size-02);
+    color: var(--gray-00);
+    background:var(--fundo);
+}
+
+.principal{
+  width: 100%;
+  text-align:center;
+  padding: 0px;
+  background-color:#525252;
+  margin-bottom:20px;
+  color:white;
+}
+
+.formul{
+  text-align:center;
+  width:100%;
+  display: block;
+}
+
+.logo img{
+  width: 380px;
+}
+
+.upload{
+  background-color: #1c1c1c;
+}
+
+.model{
+  padding: 10px;
+  border-radius:10px;
+  border: 2px solid #1c1c1c;
+  width: fit-content;
+  background-color: #1c1c1c;
+  color: aliceblue;
+  text-decoration: none;
+}
+.model{
+  padding: 10px;
+  border-radius:10px;
+  border: 2px solid #1c1c1c;
+  width: fit-content;
+  background-color:#1c1c1c;
+  color: aliceblue;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+.model:hover{
+  padding: 10px;
+  border-radius:10px;
+  border: 2px solid #1c1c1c;
+  width: fit-content;
+  background-color: orangered;
+  color: aliceblue;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+.gabarito img{
+  width: 450px;
+}
+
+.enviar{
+  background-color: orangered;
+  color: aliceblue;
+  transition: all 300ms ease-in-out;
+}
+.enviar:hover{
+  background-color: #202020;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+button{
+  padding: 10px;
+  border-radius:10px;
+  border: 2px solid #1c1c1c;
+  width: fit-content;
+  background-color: orangered;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+#id_arquivo_csv{
+  display: none;
+}
+
+#label_arquivo_csv{
+  padding: 10px;
+  background-color: #1c1c1c;
+  border-radius:10px;
+  border: 2px solid #1c1c1c;
+  width: fit-content;
+  color: aliceblue;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+#label_arquivo_csv:hover{
+  background-color: orangered;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.formulario{
+  justify-items: center;
+  align-content: center;
+  display: inline-block;
+  width: 60%;
+  height: 100px;
+}
+
+.formul {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
